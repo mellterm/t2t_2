@@ -1,4 +1,10 @@
 T2t::Application.routes.draw do
+  get "pages/welcome"
+
+  get "pages/contact"
+
+  get "pages/development"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
