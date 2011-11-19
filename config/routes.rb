@@ -1,9 +1,17 @@
 T2t::Application.routes.draw do
+
+  root :to => 'pages#welcome'
+  
+  match '/development', :to => 'pages#development'
+  match '/contact', :to => 'pages#contact'  
+
+
+  
   get "pages/welcome"
 
-  get "pages/contact"
-
   get "pages/development"
+  
+  get "pages/contact"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
