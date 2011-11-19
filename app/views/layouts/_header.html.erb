@@ -1,6 +1,7 @@
 <!-- header is for the blueprint css -->
   <header>
-    <%= image_tag("logo.png", :alt => "t2t", :class => "round") %>
+    <% logo = image_tag("logo.png", :alt => "t2t", :class => "round") %>
+	<%= link_to logo, root_path %>
     <nav class="round">
       <ul>
         <li><%= link_to "Home", root_path %></li>
@@ -10,8 +11,8 @@
       </ul>
     </nav>
 	<div id="flash">
-	<% flash.each do |key, msg| %>
-	<%= content_tag :div, msg, :id => key %>
-	<% end %>
+		<% flash.each do |key, msg| %>
+		<%= content_tag :div, msg, :id => key %>
+		<% end %>
 	</div>
   </header>
