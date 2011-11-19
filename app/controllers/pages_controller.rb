@@ -1,11 +1,15 @@
 class PagesController < ApplicationController
+
   def welcome
+    @title = "Welcome"
+  end
+  
+  def development
+    @title = "Development"
   end
 
   def contact
-  end
-
-  def development
+    @title = "Contact"
   end
 
 end
