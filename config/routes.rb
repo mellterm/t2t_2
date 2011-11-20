@@ -1,10 +1,22 @@
 T2t::Application.routes.draw do
 
+  get "login" => "sessions#new", :as => "login"
+  get "logout" => "sessions#destroy", :as => "logout"
+  get "signup" => "users#new", :as => "signup"
+  resources :users
+
+ 
+  #makes urls look like this: www.example.com/en/users non locale display optional
+  scope "(:locale)", :locale => /en|de|ru|zh|es/ do
+    resources :users
+    resources :sessions
+  end
+  
   root :to => 'pages#welcome'
   
   match '/development', :to => 'pages#development'
   match '/contact', :to => 'pages#contact'  
-
+  match '/:locale' => 'pages#welcome'
 
   
   get "pages/welcome"
