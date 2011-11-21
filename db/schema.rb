@@ -11,7 +11,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111119205610) do
+ActiveRecord::Schema.define(:version => 20111120050909) do
+
+  create_table "repos", :force => true do |t|
+    t.string   "name"
+    t.integer  "owner_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "repos", ["owner_id"], :name => "index_repos_on_owner_id"
 
   create_table "users", :force => true do |t|
     t.string   "email"
@@ -20,5 +29,7 @@ ActiveRecord::Schema.define(:version => 20111119205610) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "users", ["email"], :name => "index_users_on_email", :unique => true
 
 end

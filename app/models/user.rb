@@ -3,14 +3,17 @@ class User < ActiveRecord::Base
   attr_accessor :password
   before_save :encrypt_password
   
+  has_many :repos, :dependent => :destroy
+  
+  
   email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
-    
+  
   validates_confirmation_of :password
   validates_presence_of :password, :on => :create
   validates_length_of :password, :within => 3..8, :on => :create
-  validates_presence_of :email, :on => :create, :message => "can't be blank"
-  validates_uniqueness_of :email, :on => :create, :message => "must be unique"
-  validates_format_of :email, :with => email_regex, :on => :create, :message => "is invalid"
+  validates_presence_of :email, :on => :create, :message => I18n.t(:cant_be_blank)
+  validates_uniqueness_of :email, :on => :create, :message => I18n.t(:must_be_unique), :case_sensitive => false
+  validates_format_of :email, :with => email_regex, :on => :create, :message => I18n.t(:must_be_unique)
   
   
   def self.authenticate(email, password)
