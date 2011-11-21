@@ -1,0 +1,23 @@
+record1:
+    id: 1
+    domain_id: 1 
+    language_id: 1
+    name: Informatik    
+
+record2:
+    id: 2
+    domain_id: 1
+    language_id: 7
+    name: informática
+    
+record3:
+    id: 3
+    domain_id: 5
+    language_id: 1
+    name: Kfz-Technik
+
+record4:
+    id: 4
+    domain_id: 5
+    language_id: 8
+    name: Автомобилестроение          

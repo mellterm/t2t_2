@@ -1,0 +1,23 @@
+record1:
+    id: 1
+    language_id: 1 
+    reflanguage_id: 1
+    name: Deutsch   
+
+record2:
+    id: 2
+    language_id: 1
+    reflanguage_id: 7
+    name: alemán
+    
+record3:
+    id: 3
+    language_id: 8
+    reflanguage_id: 8
+    name: русский
+
+record4:
+    id: 4
+    language_id: 10
+    reflanguage_id: 1
+    name: Chinesisch

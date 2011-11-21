@@ -7,3 +7,15 @@ class Repo < ActiveRecord::Base
   default_scope :order => 'repos.name DESC'
   
 end
+
+# == Schema Information
+#
+# Table name: repos
+#
+#  id         :integer         not null, primary key
+#  name       :string(255)
+#  owner_id   :integer
+#  created_at :datetime
+#  updated_at :datetime
+#
+

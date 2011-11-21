@@ -1,0 +1,74 @@
+comp:
+   id: 1
+   code: COMPUTING
+   name: Data processing & computer science
+   
+eleceng:
+   id: 2
+   code: ELECENG
+   name: Electronics & electrical engineering
+   
+techdocu:
+   id: 3
+   code: TECHDOCU
+   name: Technical documentation incl. operating manuals
+   
+auto:
+   id: 4
+   code: AUTOMOTIVE
+   name: Automotive engineering
+
+rail:
+   id: 5
+   code: RAIL
+   name: Rail/tram transportation
+   
+legal:
+   id: 6
+   code: LEGAL
+   name: Law, contracts, legal documents
+   
+mecheng:
+   id: 7
+   code: MECHENG
+   name: Mechanical Engineering
+   
+civileng:
+   id: 8
+   code: CONSTRUCT
+   name: Civil Engineering & Construction
+ 
+telecomm:
+   id: 9
+   code: TELECOMS
+   name: Telecommunications 
+   
+finance:
+   id: 10
+   code: FINANCE
+   name: Technical (Business) & Finance
+   
+projman:
+   id: 11
+   code: PROJECTMGMT
+   name: Project Management, Controlling
+   
+marketing:
+   id: 12
+   code: MARKETING
+   name: Advertising & Marketing
+ 
+general:
+   id: 13
+   code: GENNONTECH
+   name: General, non-technical
+   
+gentech:
+   id: 14
+   code: GENTECH
+   name: General, technical
+
+cad:
+   id: 15
+   code: CAD
+   name: Computer Aided Design

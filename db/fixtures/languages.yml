@@ -1,0 +1,49 @@
+german:
+  id: 1
+  ISOcode: de
+  name: German 
+  
+german_de:
+  id: 2    
+  ISOcode: de_de
+  name: German (Germany)
+ 
+german_at:
+  id: 3    
+  ISOcode: de_at
+  name: German (Austria)
+ 
+english:
+  id: 4    
+  ISOcode: en
+  name: English 
+ 
+english_gb:
+  id: 5    
+  ISOcode: en_gb
+  name: English (GB)
+
+english_us:
+  id: 6 
+  ISOcode: en_us
+  name: English (US)            
+
+spanish:
+  id: 7 
+  ISOcode: es
+  name: Spanish    
+  
+russian:
+  id: 8    
+  ISOcode: ru
+  name: Russian 
+
+russian_ru:
+  id: 9  
+  ISOcode: ru_ru
+  name: Russian (Russia)
+  
+chinese:
+  id: 10
+  ISOcode: zh
+  name: Chinese
