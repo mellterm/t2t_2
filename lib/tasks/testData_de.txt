@@ -1,0 +1,15 @@
+Fehler an Telimat Verstellung
+Blockade AGP
+Blockade Schieber
+kg-Zähler abgleichen
+Ablgeich starten
+Wiege kg-Zähler
+Filterfaktor
+Kalibrierwerte
+Kalibrierpunkt 1
+Kalibrierpunkt 2
+Fließfaktor hat sich stark verändert, bitte überprüfen!
+Menge wiegen nicht möglich Maschine muss  still stehen.
+Abgleich kg-Zähler nicht   möglich. Maschine muss still stehen.
+
+

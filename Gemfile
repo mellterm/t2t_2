@@ -5,12 +5,13 @@ gem 'sqlite3', '1.3.3'
 gem 'gravatar_image_tag', '1.0.0.pre2'
 gem 'will_paginate', '3.0.pre2'
 gem 'bcrypt-ruby', :require => 'bcrypt'
-gem 'jquery-rails' 
+gem 'jquery-rails'
+gem 'seed-fu', '~> 2.0.0' 
 
 group :development do
   gem 'rspec-rails', '2.6.1'
   gem 'annotate', '2.4.0'
-  gem 'faker', '0.3.1'
+  gem 'ffaker'
 end
 
 group :test do

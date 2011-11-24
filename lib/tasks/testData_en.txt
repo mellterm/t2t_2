@@ -1,0 +1,12 @@
+Telimat setting error
+Blockade DP
+Blockade slider
+Start comparison
+kg counter cradle
+Filter factor
+Calibration value
+Calibration point 1
+Calibration point 2
+Flow factor has changed dramatically, please check!
+Not possible to weigh load, machine must stop.
+Not possible to compare kg counter. Machine must stop.

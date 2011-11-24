@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111123235529) do
+ActiveRecord::Schema.define(:version => 20111124064205) do
 
   create_table "domain_i18ns", :force => true do |t|
     t.integer "domain_id"
@@ -62,17 +62,24 @@ ActiveRecord::Schema.define(:version => 20111123235529) do
 
   add_index "target_units", ["content"], :name => "index_target_units_on_content"
 
-  create_table "translations", :force => true do |t|
-    t.integer  "sourceUnit_id",                   :null => false
-    t.integer  "targetUnit_id",                   :null => false
-    t.integer  "repo_id",                         :null => false
-    t.boolean  "isPublic",      :default => true
+  create_table "translation_domains", :force => true do |t|
+    t.integer  "translation_id"
+    t.integer  "domain_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "translations", ["sourceUnit_id"], :name => "index_translations_on_sourceUnit_id"
-  add_index "translations", ["targetUnit_id"], :name => "index_translations_on_targetUnit_id"
+  create_table "translations", :force => true do |t|
+    t.integer  "source_unit_id",                   :null => false
+    t.integer  "target_unit_id",                   :null => false
+    t.integer  "repo_id",                          :null => false
+    t.boolean  "isPublic",       :default => true
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "translations", ["source_unit_id"], :name => "index_translations_on_sourceUnit_id"
+  add_index "translations", ["target_unit_id"], :name => "index_translations_on_targetUnit_id"
 
   create_table "users", :force => true do |t|
     t.string   "email"

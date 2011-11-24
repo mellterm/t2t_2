@@ -1,5 +1,5 @@
 class SourceUnit < ActiveRecord::Base
-  attr_accessible :content
+  attr_accessible :content, :language_id
   has_many :translations 
   has_many :targetUnits, :through => :translations
   
