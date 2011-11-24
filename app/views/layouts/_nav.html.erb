@@ -13,6 +13,6 @@
 </nav>
 <div id="flash">
 	<% flash.each do |key, msg| %>
-	<%= content_tag :div, msg, :id => key %>
+	<%= content_tag :div, raw(msg), :id => "flash_#{key}" %>
 	<% end %>
 </div>
