@@ -11,7 +11,68 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111119205610) do
+ActiveRecord::Schema.define(:version => 20111123235529) do
+
+  create_table "domain_i18ns", :force => true do |t|
+    t.integer "domain_id"
+    t.integer "language_id"
+    t.string  "name"
+  end
+
+  create_table "domains", :force => true do |t|
+    t.string "code"
+    t.string "name"
+  end
+
+  create_table "language_i18ns", :force => true do |t|
+    t.integer "language_id"
+    t.integer "reflanguage_id"
+    t.string  "name"
+  end
+
+  create_table "languages", :force => true do |t|
+    t.string "ISOcode"
+    t.string "name"
+  end
+
+  create_table "repos", :force => true do |t|
+    t.string   "name"
+    t.integer  "owner_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "repos", ["owner_id"], :name => "index_repos_on_owner_id"
+
+  create_table "source_units", :force => true do |t|
+    t.string   "content"
+    t.integer  "language_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "source_units", ["content"], :name => "index_source_units_on_content"
+
+  create_table "target_units", :force => true do |t|
+    t.string   "content"
+    t.integer  "language_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "target_units", ["content"], :name => "index_target_units_on_content"
+
+  create_table "translations", :force => true do |t|
+    t.integer  "sourceUnit_id",                   :null => false
+    t.integer  "targetUnit_id",                   :null => false
+    t.integer  "repo_id",                         :null => false
+    t.boolean  "isPublic",      :default => true
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "translations", ["sourceUnit_id"], :name => "index_translations_on_sourceUnit_id"
+  add_index "translations", ["targetUnit_id"], :name => "index_translations_on_targetUnit_id"
 
   create_table "users", :force => true do |t|
     t.string   "email"
@@ -20,5 +81,7 @@ ActiveRecord::Schema.define(:version => 20111119205610) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "users", ["email"], :name => "index_users_on_email", :unique => true
 
 end

@@ -10,8 +10,9 @@ T2t::Application.routes.draw do
   scope "(:locale)", :locale => /en|de|ru|zh|es/ do
     resources :users
     resources :sessions
+   
   end
-  
+ 
   root :to => 'pages#welcome'
   
   match '/development', :to => 'pages#development'
